@@ -1,0 +1,93 @@
+.TitleDiv {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    flex-direction: column;
+}
+
+.MainExpense {
+    width: 100%;
+    height: 30%;
+    /* background-color: rgb(25, 45, 25); */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.MainExpenseWrap {
+    width: 90%;
+    height: 100%;
+    /* background-color: yellow; */
+    display: flex;
+    flex-direction: column;
+}
+
+.ExpenseInput {
+    width: 500px;
+    height: 40px;
+    border: 1px solid grey;
+    outline: none;
+    border-radius: 4px;
+    padding: 10px;
+}
+
+.AmountDiv {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    flex-direction: column;
+}
+.AddExpenseBttn{
+    width: 200px;
+    height: 50px;
+    margin-top: 20px;
+    cursor: pointer;
+    border: 1px solid gray;
+    border-radius: 5px;
+}
+.ExpensesList{
+    width: 100%;
+    height: 50%;
+    /* background-color: green; */
+    overflow-y: auto;
+}
+.ExpenseItem{
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+.one{
+    width: 33%;
+    height: 20px;
+    /* background-color: yellow; */
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+.two{
+    width: 33%;
+    height: 20px;
+    /* background-color: gold; */
+    display: flex;
+    align-items: center;
+}
+.DeleteBttn{
+    width: 100px;
+    height: 30px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    background-color: rgb(59, 136, 187);
+    color: white;
+}
+.list{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 40px;
+    font-size: 20px;
+
+}
