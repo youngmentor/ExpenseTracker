@@ -9,7 +9,7 @@ function ExpenseItem({ expense, onDeleteExpense }) {
     return (
         <div className='ExpenseItem'>
           <p className='one'>{title}</p>
-          <p className='two'>{amount}</p>
+          <p className='two'> ₦{amount}</p>
           <button onClick={handleDelete} className='DeleteBttn'>Delete</button>
         </div>
       );
