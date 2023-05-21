@@ -91,3 +91,15 @@
     font-size: 20px;
 
 }
+@media screen and (max-width: 426px){
+    .ExpenseInput{
+        width: 380px;
+    }
+    .ExpenseItem{
+        width: 90%;
+        padding: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}

@@ -5,19 +5,11 @@ import "./App.css"
 const App = () => {
   const [expenses, setExpenses] = useState([]);
 
-  useEffect(() => {
-    const storeExpenses = JSON.parse(localStorage.getItem('expenses'));
-    if (storeExpenses) {
-      setExpenses(storeExpenses);
-    }
-  }, []);
-
-  useEffect(() => {
-    localStorage.setItem('expenses', JSON.stringify(expenses));
-  }, [expenses]);
 
   const addExpense = (expense) => {
     setExpenses((prevExpenses) => [...prevExpenses, expense]);
+    // localStorage.setItem('expenses', JSON.stringify(expenses));
+
   };
 
   const deleteExpense = (id) => {
@@ -31,6 +23,18 @@ const App = () => {
     0
   );
 
+  useEffect(() => {
+    const storeExpenses = JSON.parse(localStorage.getItem('expenses'));
+    if (storeExpenses) {
+      setExpenses(storeExpenses);
+    }
+  }, []);
+
+  useEffect(() => {
+    localStorage.setItem('expenses', JSON.stringify(expenses));
+  }, [expenses]);
+
+
   return (
     <div className='MainApp'>
       <div className='LeftApp'>
@@ -40,7 +44,7 @@ const App = () => {
       <h1>Expense Tracker</h1>
       <ExpenseForm onAddExpense={addExpense} />
       <ExpenseList expenses={expenses} onDeleteExpense={deleteExpense} />
-      <p>Total Expenses: ${totalExpenses}</p>
+      <p>Total Expenses: ₦{totalExpenses}</p>
       </div>
     </div>
   );
