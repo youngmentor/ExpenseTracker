@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import "./Expenses.css"
+
 function ExpenseForm({ onAddExpense }) {
     const [title, setTitle] = useState('');
     const [amount, setAmount] = useState('');
@@ -21,6 +22,7 @@ function ExpenseForm({ onAddExpense }) {
         setAmount('');
         setDate('');
     };
+    
     return (
         <div className='MainExpense'>
             <form onSubmit={handleSubmit} className='MainExpenseWrap'>
@@ -54,6 +56,7 @@ function ExpenseForm({ onAddExpense }) {
             </form>
         </div>
     )
-}
+};
 
 export default ExpenseForm
+

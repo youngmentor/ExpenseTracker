@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import ExpenseForm from './Components/ExpenseForm';
 import ExpenseList from './Components/ExpenseList';
+
 import "./App.css"
 const App = () => {
   const [expenses, setExpenses] = useState([]);
@@ -38,8 +39,9 @@ const App = () => {
   return (
     <div className='MainApp'>
       <div className='LeftApp'>
-
+      <ExpenseList expenses={expenses} onDeleteExpense={deleteExpense}/>
       </div>
+      <hr/>
       <div className='RightApp'>
       <h1>Expense Tracker</h1>
       <ExpenseForm onAddExpense={addExpense} />
