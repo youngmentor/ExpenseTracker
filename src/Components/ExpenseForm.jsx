@@ -1,10 +1,12 @@
 import React, { useState } from 'react'
 import "./Expenses.css"
-
+import { useDispatch } from 'react-redux';
+import { addExpense } from '../Redux/Features';
 function ExpenseForm({ onAddExpense }) {
     const [title, setTitle] = useState('');
     const [amount, setAmount] = useState('');
     const [date, setDate] = useState('');
+    const dispatch = useDispatch()
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -21,6 +23,7 @@ function ExpenseForm({ onAddExpense }) {
         setTitle('');
         setAmount('');
         setDate('');
+        dispatch(addExpense(expense)) 
     };
     
     return (
