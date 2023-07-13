@@ -25,11 +25,14 @@
     flex-direction: column;
     /* background-color: red; */
 }
-@media screen and (max-width: 426px){
+@media screen and (max-width: 769px){
     .LeftApp{
         display: none;
     }
     .RightApp{
         width: 100%;
+    }
+    .MainApp{
+        background-color: blue;
     }
 }
